@@ -1,42 +1,6 @@
 # C語言常用函式庫
 
 </br>
-
-## 目錄
-
-* [fabs][1]
-* [fmax][2]
-* [fmin][3]
-* [remainder][4]
-* [fma][5]
-* [round][6]
-* [sqrt][7]
-* [cbrt][8]
-* [pow][9]
-* [hypot][10]
-* [sin][11]
-* [cos][12]
-* [tan][13]
-* [log][14]
-* [log2][15]
-
-[1]: file:///C:/Users/user/appdata/local/temp/14.html#fabs
-[2]: file:///C:/Users/user/appdata/local/temp/14.html#fmax1-2
-[3]: file:///C:/Users/user/appdata/local/temp/14.html#fmin1-2
-[4]: file:///C:/Users/user/appdata/local/temp/14.html#remainder1-2
-[5]: file:///C:/Users/user/appdata/local/temp/14.html#fma1-2-3
-[6]: file:///C:/Users/user/appdata/local/temp/14.html#round
-[7]: file:///C:/Users/user/appdata/local/temp/14.html#sqrt
-[8]: file:///C:/Users/user/appdata/local/temp/14.html#cbrt
-[9]: file:///C:/Users/user/appdata/local/temp/14.html#pow
-[10]: file:///C:/Users/user/appdata/local/temp/14.html#hypot1-2
-[11]: file:///C:/Users/user/appdata/local/temp/14.html#sin
-[12]: file:///C:/Users/user/appdata/local/temp/14.html#cos
-[13]: file:///C:/Users/user/appdata/local/temp/14.html#tan
-[14]: file:///C:/Users/user/appdata/local/temp/14.html#log
-[15]: file:///C:/Users/user/appdata/local/temp/14.html#log2
-
-</br>
 </br>
 
 ## math.h標頭檔
@@ -69,7 +33,6 @@ int main(void) {
 }
 ```
 
-[Back to contents](file:///C:/Users/user/appdata/local/temp/14.html#c)
 
 #### fmax(數字1, 數字2)
     
@@ -99,7 +62,6 @@ int main(void) {
 }
 ```
 
-[Back to contents](file:///C:/Users/user/appdata/local/temp/14.html#c)
 
 #### fmin(數字1, 數字2)
     
@@ -129,7 +91,6 @@ int main(void) {
 }
 ```
 
-[Back to contents](file:///C:/Users/user/appdata/local/temp/14.html#c)
 
 #### remainder(數字1, 數字2)
     
@@ -154,7 +115,6 @@ int main(void) {
 }
 ```
 
-[Back to contents](file:///C:/Users/user/appdata/local/temp/14.html#c)
 
 #### fma(數字1, 數字2, 數字3)
     
@@ -184,7 +144,6 @@ int main(void) {
 }
 ```
 
-[Back to contents](file:///C:/Users/user/appdata/local/temp/14.html#c)
 
 #### round(數字)
 
@@ -214,7 +173,6 @@ int main(void) {
 }    
 ```
 
-[Back to contents](file:///C:/Users/user/appdata/local/temp/14.html#c)
 
 #### sqrt(數字)
     
@@ -244,7 +202,6 @@ int main(void) {
 }
 ```
 
-[Back to contents](file:///C:/Users/user/appdata/local/temp/14.html#c)
 
 #### cbrt(數字)
     
@@ -274,7 +231,6 @@ int main(void) {
 }
 ```
 
-[Back to contents](file:///C:/Users/user/appdata/local/temp/14.html#c)
 
 #### pow(數字, 次方)
     
@@ -304,7 +260,6 @@ int main(void) {
 }
 ```
 
-[Back to contents](file:///C:/Users/user/appdata/local/temp/14.html#c)
 
 #### hypot(數字1, 數字2)
 
@@ -334,7 +289,6 @@ int main(void) {
 }
 ```
 
-[Back to contents](file:///C:/Users/user/appdata/local/temp/14.html#c)
 
 #### sin(弧度)
 
@@ -362,7 +316,6 @@ int main(void) {
 }
 ```
 
-[Back to contents](file:///C:/Users/user/appdata/local/temp/14.html#c)
 
 #### cos(弧度)
 
@@ -391,7 +344,6 @@ int main(void)
 }
 ```
 
-[Back to contents](file:///C:/Users/user/appdata/local/temp/14.html#c)
 
 #### tan(弧度)
 
@@ -420,7 +372,6 @@ int main(void) {
 }
 ```
 
-[Back to contents](file:///C:/Users/user/appdata/local/temp/14.html#c)
 
 #### log(數字)
 
@@ -449,7 +400,6 @@ int main(void) {
 }
 ```
 
-[Back to contents](file:///C:/Users/user/appdata/local/temp/14.html#c)
 
 #### log2(數字)
 
@@ -477,4 +427,106 @@ int main(void) {
 }
 ```
 
-[Back to contents](file:///C:/Users/user/appdata/local/temp/14.html#c)
+
+#### log10(數字)
+
+* **定義**
+    * 回傳數字以<font color = "#E74C3C">**10**</font>為底的對數值
+
+* **性質**
+    * 預設回傳值以及參數的資料型態為`double`
+    * 另有`float`型態的`log10f()`以及`long double`型態的`log10l()`
+
+* **程式範例**
+
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+    double i = 1.0;
+    
+    while (i <= 10.0) {
+        printf("%f\n", log10(i));
+        i += 1.0;
+    }
+    
+    return 0;
+}
+```
+
+#### floor(數字x)
+
+* **定義**
+    * 返回**小於**或**等於**數字x的最大整數值
+
+* **性質**
+    * 預設回傳值以及參數的資料型態為`double`
+    * 另有`float`型態的`floorf()`以及`long double`型態的`floorl()`
+
+* **程式範例**
+
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+
+    printf("%d\n", floor(2.3));
+    printf("%d\n", floor(3.5));
+    printf("%d\n", floor(4.0));    
+
+    return 0;
+}
+```
+
+#### ceil(數字x)
+
+* **定義**
+    * 返回**大於**或**等於**數字x的最小整數值
+
+* **性質**
+    * 預設回傳值以及參數的資料型態為`double`
+    * 另有`float`型態的`ceilf()`以及`long double`型態的`ceill()`
+
+* **程式範例**
+
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+
+    printf("%d\n", ceil(2.2));
+    printf("%d\n", ceil(3.5));
+    printf("%d\n", ceil(5.0));    
+
+    return 0;
+}
+```
+
+#### fmod(數字1, 數字2)
+
+* **定義**
+    * 返回數字1除以數字2的餘數
+
+* **性質**
+    * 預設回傳值以及參數的資料型態為`double`
+    * 另有`float`型態的`fmodf()`以及`long double`型態的`fmodl()`
+
+* **程式範例**
+
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+
+    printf("%d\n", fmod(9, 3));
+    printf("%d\n", ceil(8, 5));
+    printf("%d\n", ceil(2, 3));    
+
+    return 0;
+}
+```
+
