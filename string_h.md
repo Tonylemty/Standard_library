@@ -236,3 +236,118 @@ int main() {
 }
 ```
 
+### sprpbrk(字串1, 字串2)
+
+* **定義**
+    * 回傳字串2中的任意字元在字串1中首次出現位置的指標
+
+* **程式範例**
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[] = "Make hay while the sun shines.";
+    char t[] = "iou";
+    char *test;
+    
+    test = strpbrk(s, t);
+    printf("%s\n", test);
+    
+    return 0;    
+}
+```
+
+### strrchr(字串, 字元)
+
+* **定義**
+    * 回傳字元在字串中最後一次出現的位置的指標
+
+* **程式範例**
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[] = "Necessity is the mother of invention.";
+    char *test;
+    
+    test = strrchr(s, ' ');
+    printf("%s\n", test);
+    
+    return 0;    
+}
+```
+
+### strstr(字串1, 字串2)
+
+* **定義**
+    * 回傳字串2首次出現在字串1中的位置指標
+    
+* **程式範例**
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[] = "Self-trust is the first secret of success.";
+    char t[] = "secret";
+    char *test;
+    
+    test = strstr(s, t);
+    printf("%s\n", test);
+    
+    return 0;    
+}
+```
+
+### strtok(字串1, 字串2)
+
+* **定義**
+    * 以字串2的內容切割字串1
+    
+* **程式範例**
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[] = "Speech is si1ver, silence is gold.";
+    char t[] = " ";
+    char *test = strtok(s, " ");
+    
+    while (test != NULL) {
+        printf("%s\n", test);
+        test = strtok(NULL, " ");
+    }
+    
+    return 0;    
+}
+```
+
+### strlen(字串)
+
+* **定義**
+    * 回傳字串長度
+
+* **性質**
+    * `strlen()`在計算字串長度時，不包括字串結束符號
+
+* **程式範例**
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[] = "You may go farther and fare worse.";
+    
+    printf("%d\n", strlen(s));
+    
+    return 0;    
+}
+```
