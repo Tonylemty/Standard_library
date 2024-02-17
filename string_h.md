@@ -351,3 +351,121 @@ int main() {
     return 0;    
 }
 ```
+
+### memcpy(字串1(記憶體區段1), 字串2(記憶體區段2), int n)
+
+* **定義**
+    * 將字串2中的n個字元複製到字串1當中
+    * 類似`strncpy()`
+
+* **程式範例**
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[] = "You can't teach an old dog new tricks.";
+    char t[20];
+    
+    memcpy(t, s, 10);
+    
+    printf("%s\n", t);
+    
+    return 0;    
+}
+```
+
+### memmove(參數1, 參數2, int n)
+
+* **參數解釋**
+    * 參數1: 終點位置(記憶體區段1)
+    * 參數2: 起點位置(記憶體
+    * n: n個字元
+    
+* **定義**
+    * 由參數2開始複製n個字元，接著將複製後的字元移動到參數1
+    * 類似於`strncat()`
+    
+* **程式範例**
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[20] = "out of work";
+    char t[20] = "future";
+    
+    memmove(s, t, 6);
+    
+    printf("%s\n", s);
+    
+    return 0;    
+}
+```
+
+### memcmp(字串1(記憶體區段1), 字串2(記憶體區段2), int n)
+
+* **定義**
+    * 比較字串1(記憶體區段1)以及字串2(記憶體區段2)前n個字元是否相等
+    * 類似於`strncmp()`
+
+* **程式範例**
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[] = "Time flies.";
+    char t[] = "Time is money.";
+    
+    printf("%d\n", memcmp(s, t, 4));
+    printf("%d\n", memcmp(s, t, 10));
+    printf("%d\n", memcmp(t, s, 10));
+    
+    return 0;    
+}
+```
+
+### memchr(字串(記憶體區段), 字元, int n)
+
+* **定義**
+    * 找出某字元在某記憶體區段前n個字元第一次出現的位置
+
+* **程式範例**
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    char s[] = "imagination";
+    
+    printf("%s\n", memchr(s, 'n', 12));
+    
+    return 0;    
+}
+```
+
+### memset(字串1(記憶體區段), 字元, int n)
+
+* **定義**
+    * 將某記憶體區段的前n個字元全部設定為某一字元
+
+* **程式範例**
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[] = "congratulation";
+    
+    printf("%s\n", memset(s, 'n', 13));
+    
+    return 0;    
+}
+```
